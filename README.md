@@ -5,7 +5,7 @@ Developed to help in creating Visual Narrative (think visual novels, but no mini
 Coded by [tibonev](http://classicgames.com.br)
 
 ## Status
-![commit](https://img.shields.io/github/last-commit/jflores82/simchecklists)
+![commit](https://img.shields.io/github/last-commit/jflores82/visnar)
 
 ## Current Features
 - Each Scene supports multiple choices.
