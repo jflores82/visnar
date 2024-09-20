@@ -1,0 +1,28 @@
+{
+	"options":[
+	  	{
+		  "text":"Goto Scene 1",
+		  "dest": "test"
+	  	}
+	],
+
+	"texts": [
+		{
+			"text": "no way, this is scene 3!",
+			"character":"Red Block",
+			"char_img":"redblock.png"
+		},
+
+		{
+			"text": "all my homies hate scene 3.",
+			"character":"Blue Block",
+			"char_img":"blueblock.png"
+		}
+	],
+
+	"scene": {
+		"background": "bg2",
+		"music": "music3"
+	}
+
+  }

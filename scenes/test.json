@@ -1,0 +1,37 @@
+{
+	"options":[
+	  	{
+		  "text":"Goto Scene 2",
+		  "dest": "scene2"
+	  	},	
+	  	{
+		  "text":"Goto Scene 3",
+		  "dest":"scene3"
+	  	},
+		{ 
+		  "text":"Reload Scene 1",
+		  "dest":"test"
+		}
+	],
+
+	"texts": [
+		{
+			"text": "blablablabla",
+			"character":"Red Block",
+			"char_img":"redblock.png"
+		},
+
+		{
+			"text": "ooooooooo",
+			"character":"Blue Block",
+			"char_img":"blueblock.png"
+		}
+
+	],
+
+	"scene": {
+		"background": "bg1",
+		"music": "music1"
+	}
+
+  }

@@ -1,0 +1,38 @@
+{
+	"options":[
+	  	{
+		  "text":"Goto Scene 1",
+		  "dest": "test"
+	  	},	
+	  	{
+		  "text":"Goto Scene 3",
+		  "dest":"scene3"
+	  	}
+	],
+
+	"texts": [
+		{
+			"text": "amazing, this is scene 2!",
+			"character":"Red Block",
+			"char_img":"redblock.png"
+		},
+
+		{
+			"text": "o rly, scene 2?",
+			"character":"Blue Block",
+			"char_img":"blueblock.png"
+		},
+
+		{
+			"text": "ya rly, scene 2!",
+			"character":"Red Block",
+			"char_img":"redblock.png"
+		}
+
+	],
+
+	"scene": {
+		"background": "bg1"
+	}
+
+  }
