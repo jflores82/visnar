@@ -1,0 +1,18 @@
+{
+	"texts": [
+		{
+			"text": "End of the game, amigo",
+			"character":"Red Block",
+			"mood":"happy",
+			"position": "center"
+		}
+
+	],
+
+	"scene": {
+		"background": "bg1",
+		"music": "music1",
+		"type": "ending"
+	}
+
+  }

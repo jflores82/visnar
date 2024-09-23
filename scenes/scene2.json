@@ -2,7 +2,7 @@
 	"options":[
 	  	{
 		  "text":"Goto Scene 1",
-		  "dest": "test"
+		  "dest": "001"
 	  	},	
 	  	{
 		  "text":"Goto Scene 3",
@@ -14,25 +14,29 @@
 		{
 			"text": "amazing, this is scene 2!",
 			"character":"Red Block",
-			"char_img":"redblock.png"
+			"mood":"happy",
+			"position":"left"
 		},
 
 		{
 			"text": "o rly, scene 2?",
 			"character":"Blue Block",
-			"char_img":"blueblock.png"
+			"mood":"happy",
+			"position":"left"
 		},
 
 		{
 			"text": "ya rly, scene 2!",
 			"character":"Red Block",
-			"char_img":"redblock.png"
+			"mood":"happy",
+			"position":"left"
 		}
 
 	],
 
 	"scene": {
-		"background": "bg1"
+		"background": "bg1",
+		"type": "scene"
 	}
 
   }

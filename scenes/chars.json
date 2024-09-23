@@ -1,0 +1,12 @@
+{
+	"Red Block":
+		{
+	  		"happy": "redblock_h.png",
+			"angry": "redblock_a.png"
+		},
+	"Blue Block":
+		{
+			"happy": "blueblock.png",
+			"angry": "blueblock.png"
+		}
+}

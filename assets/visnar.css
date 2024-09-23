@@ -9,6 +9,15 @@
 	--color5: rgba(125,0,0,1);
 	--color6: rgba(255,0,0,1);
 	--color_clear: rgba(0,0,0,0);
+	--font: pixeloid, verdana, sans-serif;
+	--font-size-small: 18px;
+	--font-size-big: 36px;
+}
+
+/* Font */
+@font-face {
+	font-family: pixeloid;
+	src: url('pixeloid_mono.otf');
 }
 
 /* HTML Elemtents */
@@ -16,13 +25,38 @@ body {
 	margin:0px;
 	padding:0px;
 	overflow:hidden;
+	font-family: var(--font);
 }
 
 /* Elements by ID */
 #bg {
 	width:100%;
 	height:100vh;
-	background-size:cover;
+	background-size:contain;
+}
+
+#title_img_container { 
+	display: flex;
+    position: fixed;
+    top: 0vh;
+    width: 100%;
+    justify-items: center;
+    justify-content: center;
+}
+
+#title_img { 
+	max-width:600px;
+}
+
+#title_option_container { 
+	display:flex;
+	position:fixed;
+	top:50vh;
+	left:0px;
+	width:100%;
+	height:50vh;
+	align-items:center;
+	justify-content: center;
 }
 
 #char { 
@@ -32,11 +66,11 @@ body {
 
 #text { 
 	color:white;
-	font-size:20px;
+	font-size:var(--font-size-small);
 }
 
 #nextPage {
-	font-size:40px;
+	font-size:var(--font-size-big);
 	background-color: var(--color_clear);
     border: 0px;
 	cursor:pointer;
@@ -59,6 +93,14 @@ body {
 	width:80%;
 }
 
+#menuBtn { 
+	position:fixed;
+	top:5px;
+	left:2%;
+	cursor:pointer;
+	font-size:var(--font-size-big);
+}
+
 #menu { 
 	display:none;
 	position:fixed; 
@@ -68,6 +110,11 @@ body {
 	height:100vh;
 	background-color:rgba(0,0,0,0.7);
 	padding:5%;
+}
+
+#char-img-wrapper { 
+	display:flex;
+	padding:10px;
 }
 
 /* Classes */
@@ -98,18 +145,31 @@ body {
 .inner-menu { 
 	background-color: var(--color1);
 	color: var(--color2);
-	font-size:20px;
+	font-size:var(--font-size-small);
 	width: 90%;
     padding: 10px;
     height: 80vh;
     border-radius: 10px;
     border: 1px vaR(--color4) solid;
     box-sizing: border-box;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inner-menu-wrapper { 
+	display:flex;
+	flex-direction: column;
+}
+.inner-menu-wrapper span { 
+	cursor:pointer; 
+	padding:10px 0 10px 0;
 }
 
 .option_btn { 
 	background-color: var(--color5);
-	font-size:20px;
+	font-family: var(--font);
+	font-size:var(--font-size-small);
 	color: var(--color2);
 	padding:10px;
 	border-radius:2px;
@@ -121,6 +181,13 @@ body {
 	background-color: var(--color6);
 	transition:0.5s all;
 }
+#char-img-wrapper { 
+	display:flex;
+	padding:10px;
+}
+.char-img-left { justify-content:flex-start; }
+.char-img-right { justify-content:flex-end; }
+.char-img-center { justify-content:center; }
 
 /* Colors */
 .background-one { 

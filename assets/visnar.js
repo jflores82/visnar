@@ -1,4 +1,9 @@
-const sceneFile = 'test.json';
+// Visnar - Visual Narrative Engine //
+// coded by tibonev (classicgames.com.br) //
+// sources @ github.com/jflores82/visnar/ //
+
+// Initial Scene //
+const sceneFile = '001.json';
 
 const char = document.getElementById("char");
 const char_img = document.getElementById("char_img");
@@ -8,17 +13,22 @@ const option = document.getElementById("option");
 const nextPageBtn = document.getElementById("nextPage");
 const sceneMusic = document.getElementById("music");
 const body = document.getElementById("body");
-const menuDiv = document.getElementById("menu");
-const menuCloseBtn = document.getElementById("menuCloseBtn");
 const option_container = document.getElementById("option_container");
+const char_img_wrapper = document.getElementById("char-img-wrapper");
 
 nextPageBtn.addEventListener("click", nextPage);
-body.addEventListener("keydown", menuToggle);
-menuCloseBtn.addEventListener("click", menuClose);
 
 var currentPage;
 var currentSong;
 var totalPages;
+var sceneType;
+
+
+async function loadCharData() {
+	scenePath = "scenes/chars.json";
+	const resp = await fetch(scenePath);
+    chars = await resp.json();
+} 
 
 async function loadSceneData(sceneData) {
 	scenePath = "scenes/" + sceneData
@@ -27,9 +37,12 @@ async function loadSceneData(sceneData) {
 	    	
     currentPage = 0;
     totalPages = json.texts.length;
+    sceneType = json.scene.type;
             
     bga.style.backgroundImage = "url('img_bg/" + json.scene.background +".png')";
 	nextPageBtn.innerHTML = "&gt;&nbsp;&gt;";
+
+    if(sceneType == "ending" || sceneType == "gameover") { nextPageBtn.innerHTML = ""; }
 
 	option_container.classList.remove("menu-show");
             
@@ -49,8 +62,13 @@ function renderPage(data) {
     char.innerHTML = '';
     text.innerHTML = '';
     option.innerHTML = '';
-                                  
-    char_img.src = "img_char/" + data.texts[currentPage].char_img;
+
+    data_char = data.texts[currentPage].character;
+    data_mood = data.texts[currentPage].mood;
+    chars_img = chars[data_char][data_mood];
+    position = data.texts[currentPage].position;
+    char_img_pos_class(position);
+    char_img.src = "img_char/" + chars_img;
     char.innerHTML = data.texts[currentPage].character;
     text.innerHTML = data.texts[currentPage].text;
             
@@ -78,8 +96,11 @@ function nextPage() {
         renderPage(json);
     }
     if(currentPage == totalPages) {
-		nextPageBtn.innerHTML = "";
-        renderOptions(json);
+        if(sceneType == "scene") { 
+            nextPageBtn.innerHTML = "";
+            renderOptions(json);
+        }
+        
     }
 }
 
@@ -89,21 +110,26 @@ function option_btn_click() {
     loadSceneData(newSceneFile);
 }
 
-function menuToggle(e) {
-	if(e.code == "Escape") { 
-		if(menuDiv.classList.contains("menu-show")) { 
-			menuDiv.classList.remove("menu-show");
-		} else { 
-			menuDiv.classList.add("menu-show");
-		}
-	}
+function char_img_pos_class(position) { 
+    char_img_wrapper.classList.remove("char-img-left");
+    char_img_wrapper.classList.remove("char-img-right");
+    char_img_wrapper.classList.remove("char-img-center");
+
+    switch(position) {
+        case "left":
+            char_img_wrapper.classList.add("char-img-left");
+        break;
+
+        case "right":
+            char_img_wrapper.classList.add("char-img-right");
+        break;
+
+        case "center":
+            char_img_wrapper.classList.add("char-img-center");
+    }
 }
 
-function menuClose() { 
-	if(menuDiv.classList.contains("menu-show")) { 
-		menuDiv.classList.remove("menu-show");
-	}
-}
 
+loadCharData();
 loadSceneData(sceneFile);
     

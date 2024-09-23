@@ -17,7 +17,7 @@
 		<audio id="sfx"></audio>
         <div id="bg">
             <div class="container">
-                <div><img src="#" id="char_img" class="char_img"></div>
+                <div id="char-img-wrapper"><img src="#" id="char_img" class="char_img"></div>
                 <div class="content-row background-one border-two dynamic-width"><span id="char"></span></div>
                 <div class="content-row background-one border-two"><span id="text"></span></div>
                 <div class="content-row self-end"><button id="nextPage" class="stroke-text-two">&gt;&nbsp;&gt;</button></div>
@@ -27,12 +27,25 @@
 
             <div id="menu">
                 <div class="inner-menu">
-                    <span id="menuCloseBtn">Return to Game</span>
+                    <div class="inner-menu-wrapper">
+                        <span id="musicBtn">Mute Music</span>
+                        <span id="sfxBtn">Mute SFX</span>
+                        <span id="voiceBtn">Mute Voices</span>
+                        <span></span>
+                        <span id="menuCloseBtn">Return to Game</span>
+                        <span></span>
+                        <span id="titleRetBtn">Exit Game</span>
+                    </div>
                 </div>
             </div>
+
+            <div id="menuBtn">≡</div>
+
         </div>
     </body>
 
     <script src="assets/visnar.js"></script>
+    <script src="assets/menu.js"></script>
+    <script src="assets/game_settings.js"></script>
     
 </html>

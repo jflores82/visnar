@@ -10,7 +10,7 @@
 	  	},
 		{ 
 		  "text":"Reload Scene 1",
-		  "dest":"test"
+		  "dest":"001"
 		}
 	],
 
@@ -18,20 +18,31 @@
 		{
 			"text": "blablablabla",
 			"character":"Red Block",
-			"char_img":"redblock.png"
+			"mood":"happy",
+			"position": "left"
+		},
+
+		{
+			"text": "ooooooooo",
+			"character":"Red Block",
+			"mood":"angry",
+			"position":"right"
 		},
 
 		{
 			"text": "ooooooooo",
 			"character":"Blue Block",
-			"char_img":"blueblock.png"
+			"mood":"angry",
+			"position":"center"
 		}
+
 
 	],
 
 	"scene": {
 		"background": "bg1",
-		"music": "music1"
+		"music": "music1",
+		"type": "scene"
 	}
 
   }
