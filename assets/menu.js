@@ -19,6 +19,11 @@ musicBtn.addEventListener("click", musicToggle);
 sfxBtn.addEventListener("click", sfxToggle);
 voiceBtn.addEventListener("click", voiceToggle);
 
+// Save / Load Options //
+const saveBtn = document.getElementById("saveBtn");
+const loadBtn = document.getElementById("loadBtn");
+saveBtn.addEventListener("click", savegame);
+loadBtn.addEventListener("click", loadgame);
 
 function menuBtnClick() {
 	if(menuDiv.classList.contains("menu-show")) { 
@@ -60,5 +65,24 @@ function voiceToggle() {
 }
 
 function titleRetClick() {
-	location.href = "title.html";
+	if(confirm("Are you sure you want to quit? All unsaved progress will be lost?") == true) {
+		location.href = "title.html";
+	}
+}
+
+function savegame() { 
+	if(confirm("Do you want to save the game?") == true) { 
+		localStorage.savedgame = "1";
+		localStorage.savedScene = newSceneFile;
+		alert("Game Saved Sucessfully");
+
+	}
+}
+
+function loadgame() { 
+	if(confirm("Do you want to load the last saved game?") == true) { 
+		if(localStorage.savedgame == "1") { 
+			loadSceneData(localStorage.savedScene);
+		}
+	}
 }

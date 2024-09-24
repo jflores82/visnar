@@ -2,9 +2,13 @@
 // coded by tibonev (classicgames.com.br) //
 // sources @ github.com/jflores82/visnar/ //
 
-// Initial Scene //
-const sceneFile = '001.json';
+// URL Parameters //
+const searchParams = new URLSearchParams(window.location.search);
 
+// Initial Scene //
+var newSceneFile = "001.json";
+
+// Constants from DOM elements //
 const char = document.getElementById("char");
 const char_img = document.getElementById("char_img");
 const bga = document.getElementById("bg");
@@ -12,18 +16,21 @@ const text = document.getElementById("text");
 const option = document.getElementById("option");
 const nextPageBtn = document.getElementById("nextPage");
 const sceneMusic = document.getElementById("music");
+const sceneSFX = document.getElementById("sfx");
 const body = document.getElementById("body");
 const option_container = document.getElementById("option_container");
 const char_img_wrapper = document.getElementById("char-img-wrapper");
 
+// Listeners //
 nextPageBtn.addEventListener("click", nextPage);
 
+// Variables //
 var currentPage;
 var currentSong;
 var totalPages;
 var sceneType;
 
-
+// Main program //
 async function loadCharData() {
 	scenePath = "scenes/chars.json";
 	const resp = await fetch(scenePath);
@@ -91,6 +98,8 @@ function renderOptions(data) {
 }
 
 function nextPage() { 
+    sceneSFX.src = 'sfx/sfx_click.mp3';
+    sceneSFX.play();
     currentPage++;
     if(currentPage < totalPages) { 
         renderPage(json);
@@ -105,6 +114,8 @@ function nextPage() {
 }
 
 function option_btn_click() { 
+    sceneSFX.src = 'sfx/sfx_sel.mp3';
+    sceneSFX.play();
     dest = this.getAttribute("dest");
     newSceneFile = dest + ".json";
     loadSceneData(newSceneFile);
@@ -129,7 +140,9 @@ function char_img_pos_class(position) {
     }
 }
 
-
 loadCharData();
-loadSceneData(sceneFile);
+
+if(searchParams.has('load')) { newSceneFile = localStorage.savedScene; }
+
+loadSceneData(newSceneFile);
     

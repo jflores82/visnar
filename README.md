@@ -5,7 +5,7 @@ Developed to help creating Visual Narrative (think visual novels, but no minigam
 Coded by [tibonev](http://classicgames.com.br)
 
 ## Status
-![commit](https://img.shields.io/github/last-commit/jflores82/simchecklists)
+![commit](https://img.shields.io/github/last-commit/jflores82/visnar)
 
 ## Current Features
 - Specific scenes for Title / Ending(s) / Gameover
@@ -13,14 +13,7 @@ Coded by [tibonev](http://classicgames.com.br)
 - Each line supports a character w/ image, in 3 positions.
 - Each Scene can have a unique background.
 - Each Scene can have unique music. 
-
-## Todo
-- Add Voice over / Voice Acting support.
-- Add save / load games.
-- See how to transition between scenes (maybe? not sure, depending on how it can be handled)
-- Add SFX
-- Add transition between pages
-- Add documentation
+- Game can be saved and loaded at any time.
 
 ## Usage 
 Each scene resides inside one json file, which contains text array (each line spoken by a character), and a list of options after all the lines are said. 
@@ -35,6 +28,14 @@ Special json files are: title.json: which contains information about the title s
 - index.html is the loader, which loads title.html which loads game.html
 
 ## Version History
+Version 0.2 (24/09/2024)
+- Fix Issue #4 - You can now save your game at any time, through the menu.
+- Fix Issue #9 - Exit Game doesn't require confirmation to quit, now it shows a dialog for the user to confirm.
+- Fix Issue #10 - Added basic SFX support
+- Changed the look of the menu-button to be more visible.
+- Fixed error of background image not showing correctly (changed css for the class)
+- Added option to add crt filter to the game, using game.json
+
 Version 0.1 (23/09/2024)
 - Game always start with start.json and first scene must be named 001.json
 - Added game settings files (configured through game.json)

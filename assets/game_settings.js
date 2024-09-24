@@ -6,7 +6,7 @@ async function loadSettings() {
 	    	
     document.title = settings.settings.name;
 	if(settings.settings.crt_filter == "true") { 
-		document.getElementById("#crt_filter").classList.add("crt-show");
+		document.getElementById("scanlines").classList.add("scanlines-show");
 	}
 }
 

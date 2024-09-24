@@ -13,6 +13,7 @@
 
 	<body>
 		<audio id="music" loop></audio>
+		<div id="scanlines" class="scanlines"></div>
 		<div id="bg"></div>
             <div id="title_img_container">
 				<img id="title_img" src="#">
@@ -21,43 +22,14 @@
             <div id="title_option_container">
 				<div id="option">
 					<button class="option_btn" id="startBtn">Start Game</button>
+					<div style="height:15px;"></div>
+					<button class="option_btn" id="loadBtn" style="display:none;">Load Game</button>
 				</div>
 			</div>
 	    </div>
 	</body>
 
-	<script>
-		const bga = document.getElementById("bg");
-		const logo = document.getElementById("title_img");
-		const startBtn = document.getElementById("startBtn");
-
-		startBtn.addEventListener("click", startGame);
-
-		async function loadTitleScreen() {
-			scenePath = "scenes/title.json";
-			const resp = await fetch(scenePath);
-    		json = await resp.json();
-	    	    		
-    		bga.style.backgroundImage = "url('img_bg/" + json.scene.background + ".png')";
-			logo.src = "img_bg/" + json.scene.logo + ".png";
-			            
-    		if(json.scene.music) { 
-        		if(currentSong !== json.scene.music) {
-            		currentSong = json.scene.music;
-            		sceneMusic.src = "mus/" + json.scene.music + ".mp3";
-            		sceneMusic.play();
-        		}
-    		}
-		}
-
-		function startGame() { 
-			location.href = "game.html";
-		}
-
-		loadTitleScreen();
-
-	</script>
-
+	<script src="assets/title.js"></script>
 	<script src="assets/game_settings.js"></script>
 
 </html>

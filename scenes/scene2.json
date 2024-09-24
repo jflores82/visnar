@@ -9,34 +9,25 @@
 		  "dest":"scene3"
 	  	}
 	],
-
 	"texts": [
 		{
-			"text": "amazing, this is scene 2!",
+			"text": "scene 2, who knew?!",
 			"character":"Red Block",
 			"mood":"happy",
 			"position":"left"
 		},
 
 		{
-			"text": "o rly, scene 2?",
+			"text": "no way, scene 2",
 			"character":"Blue Block",
 			"mood":"happy",
 			"position":"left"
-		},
-
-		{
-			"text": "ya rly, scene 2!",
-			"character":"Red Block",
-			"mood":"happy",
-			"position":"left"
 		}
-
 	],
 
 	"scene": {
-		"background": "bg1",
-		"type": "scene"
+		"background": "bg2",
+		"type":"scene"
 	}
 
   }
