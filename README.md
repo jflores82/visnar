@@ -28,6 +28,12 @@ Special json files are: title.json: which contains information about the title s
 - index.html is the loader, which loads title.html which loads game.html
 
 ## Version History
+Version 0.3 (30/09/2024)
+- Fix Issue #11 - Character ID / Name are now separated.
+- Character image is now flipped accordingly.
+- Changed the look of the text box to be more visible.
+- Set a max height for character image display.
+
 Version 0.2 (24/09/2024)
 - Fix Issue #4 - You can now save your game at any time, through the menu.
 - Fix Issue #9 - Exit Game doesn't require confirmation to quit, now it shows a dialog for the user to confirm.

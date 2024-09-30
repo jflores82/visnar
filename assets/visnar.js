@@ -73,10 +73,11 @@ function renderPage(data) {
     data_char = data.texts[currentPage].character;
     data_mood = data.texts[currentPage].mood;
     chars_img = chars[data_char][data_mood];
+    chars_name = chars[data_char].char_name;
     position = data.texts[currentPage].position;
     char_img_pos_class(position);
     char_img.src = "img_char/" + chars_img;
-    char.innerHTML = data.texts[currentPage].character;
+    char.innerHTML = chars_name;
     text.innerHTML = data.texts[currentPage].text;
             
 }
@@ -105,10 +106,10 @@ function nextPage() {
         renderPage(json);
     }
     if(currentPage == totalPages) {
-        if(sceneType == "scene") { 
+        //if(sceneType == "scene") { 
             nextPageBtn.innerHTML = "";
             renderOptions(json);
-        }
+        //}
         
     }
 }

@@ -12,14 +12,14 @@
 	"texts": [
 		{
 			"text": "scene 2, who knew?!",
-			"character":"Red Block",
+			"character":"redblock",
 			"mood":"happy",
 			"position":"left"
 		},
 
 		{
 			"text": "no way, scene 2",
-			"character":"Blue Block",
+			"character":"blueblock",
 			"mood":"happy",
 			"position":"left"
 		}

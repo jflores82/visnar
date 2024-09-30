@@ -2,7 +2,7 @@
 	"texts": [
 		{
 			"text": "End of the game, amigo",
-			"character":"Red Block",
+			"character":"redblock",
 			"mood":"happy",
 			"position": "center"
 		}

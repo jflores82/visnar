@@ -17,21 +17,21 @@
 	"texts": [
 		{
 			"text": "blablablabla",
-			"character":"Red Block",
+			"character":"redblock",
 			"mood":"happy",
 			"position": "left"
 		},
 
 		{
 			"text": "ooooooooo",
-			"character":"Red Block",
+			"character":"redblock",
 			"mood":"angry",
 			"position":"right"
 		},
 
 		{
 			"text": "ooooooooo",
-			"character":"Blue Block",
+			"character":"blueblock",
 			"mood":"angry",
 			"position":"center"
 		}

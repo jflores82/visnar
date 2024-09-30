@@ -14,14 +14,14 @@
 	"texts": [
 		{
 			"text": "no way, this is scene 3!",
-			"character":"Red Block",
+			"character":"redblock",
 			"mood":"happy",
 			"position":"left"
 		},
 
 		{
 			"text": "all my homies hate scene 3.",
-			"character":"Blue Block",
+			"character":"blueblock",
 			"mood":"happy",
 			"position":"left"
 		}

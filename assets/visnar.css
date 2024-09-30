@@ -2,7 +2,7 @@
 
 /* Global Variables */
 :root {
-	--color1: rgba(0,0,255,0.5);
+	--color1: rgba(0,0,255,0.8);
 	--color2: rgba(255,255,255,1);
 	--color3: rgba(0,0,0,1);
 	--color4: rgba(156,156,156,1);
@@ -33,7 +33,7 @@ body {
 #bg {
 	width:100%;
 	height:100vh;
-	background-size:contain;
+	background-size:100% 100%;
 }
 
 #title_img_container { 
@@ -123,7 +123,7 @@ body {
 
 #char-img-wrapper { 
 	display:flex;
-	padding:10px;
+	padding:50px;
 }
 
 /* Classes */
@@ -192,10 +192,11 @@ body {
 }
 #char-img-wrapper { 
 	display:flex;
-	padding:10px;
+	padding:50px;
 }
+.char_img { max-height:50vh; }
 .char-img-left { justify-content:flex-start; }
-.char-img-right { justify-content:flex-end; }
+.char-img-right { transform: scaleX(-1); }
 .char-img-center { justify-content:center; }
 
 .scanlines {
